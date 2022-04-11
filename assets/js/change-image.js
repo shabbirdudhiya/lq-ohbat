@@ -1,11 +1,10 @@
 $(document).ready(function () {
-
     $("button").click(function () {
         let btnId = this.id;
         console.log(btnId);
         switch (btnId) {
             case 'plain-cloth-image':
-                $('#cloth').attr('src', '');
+                $('#cloth').attr('src', 'assets/img/2.jpg');
                 break;
             case 'starch-cloth-image':
                 $('#cloth').attr('src', '');

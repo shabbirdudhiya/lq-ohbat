@@ -30,13 +30,12 @@ $(document).ready(function () {
             value: percentage
         });
         $(".progressbar-label").text(percentage + "%");
-        saveWomenApparel(womenApparelVars)
+        saveWomenApparel(womenApparelVars);
     }
 
     function saveWomenApparel(womenApparelVars) {
         womenApparelVars.forEach(element => {
             if (element.checked == true) {
-                console.log(element.id);
                 if (localStorage.getItem(element.id)) {
                     localStorage.removeItem(element.id);
                     localStorage.setItem(element.id, true)
