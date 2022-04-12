@@ -17,6 +17,8 @@ let clearMenChecklist = $('#btn-clear-checklist-men').on('click', function () {
         localStorage.removeItem('nazami-socks');
         localStorage.removeItem('white-socks');
         localStorage.removeItem('menApparelProgress');
+        localStorage.setItem('menApparelProgress', 0)
+
     }
 })
 
@@ -35,17 +37,39 @@ let clearWomenChecklist = $('#btn-clear-checklist-women').on('click', function (
         localStorage.removeItem('bengals-hairband');
         localStorage.removeItem('nazami-socks');
         localStorage.removeItem('womenApparelProgress')
+        localStorage.setItem('womenApparelProgress', 0)
     }
 })
 
 let clearQuiz = $('#btn-clear-quiz').on('click', function () {
     if (clearQuiz) {
         $('.clear-msg').css('display', 'block');
-        $('#btn-clear-checklist').attr('disabled', true)
+        $('#btn-clear-quiz').attr('disabled', true)
 
         localStorage.removeItem('opt3')
         localStorage.removeItem('opt5')
         localStorage.removeItem('opt12')
         localStorage.removeItem('opt14')
+        localStorage.setItem('quizProgress', 0)
+    }
+})
+let clearKit = $('#btn-clear-kit').on('click', function () {
+    if (clearQuiz) {
+        $('.clear-msg').css('display', 'block');
+        $('#btn-clear-kit').attr('disabled', true)
+
+        localStorage.removeItem('namazi-sujni-masallah')
+        localStorage.removeItem('namazi-tasbeeh')
+        localStorage.removeItem('namazi-rumaal')
+        localStorage.removeItem('munajaat-shareefah')
+        localStorage.removeItem('bihori-hafti')
+        localStorage.removeItem('fajr-hafti')
+        localStorage.removeItem('silat-al-imam')
+        localStorage.removeItem('nazr-al-maqam')
+        localStorage.removeItem('najwa')
+        localStorage.removeItem('qardanhasanah')
+        localStorage.removeItem('faiz-al-mawaid-al-burhaniyah')
+        localStorage.removeItem('tosho')
+        localStorage.setItem('kitProgress', 0)
     }
 })
