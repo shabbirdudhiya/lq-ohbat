@@ -41,15 +41,14 @@ $(document).ready(function () {
     function saveMenApparel(menApparelVars) {
         menApparelVars.forEach(element => {
             if (element.checked == true) {
-                // console.log(element.id);
                 if (localStorage.getItem(element.id)) {
                     localStorage.removeItem(element.id);
                     localStorage.setItem(element.id, true)
-
                     // Disable Checkbox
                     $('#' + element.id).attr("disabled", true)
                     $('#progressbarMenApparel').css('width', percentage + '%').attr('aria-valuenow', percentage).html(percentage + "%");
                     localStorage.setItem('menApparelProgress', percentage)
+                    $('.notapplicablesection').hide();
                     if (percentage == 100) {
                         showCompletedCheck(percentage);
                     }
@@ -59,6 +58,7 @@ $(document).ready(function () {
                     $('#' + element.id).attr("disabled", true)
                     $('#progressbarMenApparel').css('width', percentage + '%').attr('aria-valuenow', percentage).html(percentage + "%");
                     localStorage.setItem('menApparelProgress', percentage)
+                    $('.notapplicablesection').hide();
                     if (percentage == 100) {
                         showCompletedCheck(percentage);
                     }
@@ -90,7 +90,26 @@ $(document).ready(function () {
     }
 
 
+
+    $('#not-applicable').click(function () {
+        localStorage.setItem('menApparelProgress', 100)
+        localStorage.setItem('menApparelNotApplicable', true)
+        hideChecklistSection();
+        $('#not-applicable').attr("disabled", true).prop('checked', true);
+    });
+    function checkIfNotApplicable() {
+        if (localStorage.getItem('menApparelNotApplicable') == "true") {
+            hideChecklistSection();
+            $('#not-applicable').attr("disabled", true).prop('checked', true);
+        }
+    }
+    function hideChecklistSection() {
+        $('.cards').hide();
+    }
+
+    checkIfNotApplicable();
     countChecked();
     getLocalStorageData();
     $(":checkbox").click(countChecked);
 });
+

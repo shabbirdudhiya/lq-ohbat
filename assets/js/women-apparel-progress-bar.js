@@ -43,7 +43,8 @@ $(document).ready(function () {
                     // Disable Checkbox
                     $('#' + element.id).attr("disabled", true)
                     $('#progressbarWomenApparel').css('width', percentage + '%').attr('aria-valuenow', percentage).html(percentage + "%");
-                    localStorage.setItem('womenApparelProgress', percentage)
+                    localStorage.setItem('womenApparelProgress', percentage);
+                    $('.notapplicablesection').hide();
                     if (percentage == 100) {
                         showCompletedCheck();
                     }
@@ -52,7 +53,8 @@ $(document).ready(function () {
                     localStorage.setItem(element.id, true)
                     $('#' + element.id).attr("disabled", true)
                     $('#progressbarWomenApparel').css('width', percentage + '%').attr('aria-valuenow', percentage).html(percentage + "%");
-                    localStorage.setItem('womenApparelProgress', percentage)
+                    localStorage.setItem('womenApparelProgress', percentage);
+                    $('.notapplicablesection').hide();
                     if (percentage == 100) {
                         showCompletedCheck();
                     }
@@ -81,6 +83,24 @@ $(document).ready(function () {
         }
     }
 
+
+    $('#not-applicable').click(function () {
+        localStorage.setItem('womenApparelProgress', 100)
+        localStorage.setItem('womenApparelNotApplicable', true)
+        hideChecklistSection();
+        $('#not-applicable').attr("disabled", true).prop('checked', true);
+    });
+    function checkIfNotApplicable() {
+        if (localStorage.getItem('womenApparelNotApplicable') == "true") {
+            hideChecklistSection();
+            $('#not-applicable').attr("disabled", true).prop('checked', true);
+        }
+    }
+    function hideChecklistSection() {
+        $('.cards').hide();
+    }
+
+    checkIfNotApplicable();
 
     countChecked();
     getLocalStorageData();

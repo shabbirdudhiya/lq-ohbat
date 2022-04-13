@@ -17,7 +17,9 @@ let clearMenChecklist = $('#btn-clear-checklist-men').on('click', function () {
         localStorage.removeItem('nazami-socks');
         localStorage.removeItem('white-socks');
         localStorage.removeItem('menApparelProgress');
+        localStorage.removeItem('menApparelNotApplicable')
         localStorage.setItem('menApparelProgress', 0)
+        localStorage.setItem('isItsSaved', false)
 
     }
 })
@@ -37,7 +39,9 @@ let clearWomenChecklist = $('#btn-clear-checklist-women').on('click', function (
         localStorage.removeItem('bengals-hairband');
         localStorage.removeItem('nazami-socks');
         localStorage.removeItem('womenApparelProgress')
+        localStorage.removeItem('womenApparelNotApplicable')
         localStorage.setItem('womenApparelProgress', 0)
+        localStorage.setItem('isItsSaved', false)
     }
 })
 
@@ -51,6 +55,7 @@ let clearQuiz = $('#btn-clear-quiz').on('click', function () {
         localStorage.removeItem('opt12')
         localStorage.removeItem('opt14')
         localStorage.setItem('quizProgress', 0)
+        localStorage.setItem('isItsSaved', false)
     }
 })
 let clearKit = $('#btn-clear-kit').on('click', function () {
@@ -71,5 +76,6 @@ let clearKit = $('#btn-clear-kit').on('click', function () {
         localStorage.removeItem('faiz-al-mawaid-al-burhaniyah')
         localStorage.removeItem('tosho')
         localStorage.setItem('kitProgress', 0)
+        localStorage.setItem('isItsSaved', false)
     }
 })
