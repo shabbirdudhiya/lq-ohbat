@@ -11,6 +11,7 @@ function setItems() {
         localStorage.setItem('womenApparelProgress', 0)
         localStorage.setItem('quizProgress', 0)
         localStorage.setItem('kitProgress', 0)
+        localStorage.setItem('isItsSaved', false)
     }
 }
 function getItems() {
@@ -37,25 +38,7 @@ function setValues() {
     quizProgressBar.text(percentageQuizProgressBar + "% - Quiz");
     kitProgressBar.text(percentageKitProgressBar + "% - Kit");
 }
-// getuserits
-// function getUserIts() {
-//     let decodedCookie = decodeURIComponent(document.cookie);
-//     let ca = decodedCookie.split(';');
-//     console.log(ca[1]);
-// }
 
-function checkIfAllActivityIsDone() {
-    if (localStorage.getItem('menApparelProgress') == 100
-        && localStorage.getItem('womenApparelProgress') == 100
-        && localStorage.getItem('quizProgress') == 100
-        && localStorage.getItem('kitProgress') == 100) {
-        console.log("completed");
-    } else {
-        console.log("notcompleted");
-    }
-
-}
-checkIfAllActivityIsDone();
 setItems();
 getItems();
 setValues();
