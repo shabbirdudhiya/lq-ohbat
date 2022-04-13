@@ -11,6 +11,95 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/bottom-navbar.css">
+    <style>
+        .sentenceDiv {
+            font-size: 14px;
+            text-align: center;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-rows: auto;
+            grid-template-areas:
+                'sentence'
+                'message'
+                'footer';
+        }
+
+        .audios {
+            display: none;
+        }
+
+        #sentence {
+            font-size: 2em;
+            padding: 1em;
+            line-height: 1.4;
+            font-weight: 900;
+            grid-area: sentence;
+            -webkit-animation-name: bgColor;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 1s;
+            /* Safari 4.0 - 8.0 */
+            animation-name: bgColor;
+            animation-duration: 1s;
+            transition: 1sec;
+            touch-action: none;
+        }
+
+        #message {
+            font-size: 2em;
+            color: #999;
+            grid-area: message;
+            padding-bottom: 1em;
+            line-height: 1.5;
+        }
+
+        #footer {
+            font-size: 1em;
+            color: #555;
+            grid-area: footer;
+        }
+
+        #btnSolve,
+        #btnNext {
+            background-color: darkslategray;
+            padding: 0.5em 2em;
+            color: white;
+            font-size: 2em;
+            border-radius: 8px;
+        }
+
+        .draggable {
+            display: inline-block;
+            padding: 5px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 0px 8px;
+            cursor: move;
+        }
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes bgColor {
+            0% {
+                background-color: white;
+            }
+
+            100% {
+                background-color: #c3ffc3;
+            }
+        }
+
+        /* Standard syntax */
+        @keyframes bgColor {
+            0% {
+                background-color: white;
+            }
+
+            100% {
+                background-color: #c3ffc3;
+            }
+        }
+    </style>
     <title>LQ- Ohbat</title>
 </head>
 
@@ -29,6 +118,29 @@
             </h2>
         </center>
     </div>
+
+    <section>
+        <div dir="rtl" class="kanz sentenceDiv" onbeforecopy="return false" ondragstart="return false"
+            onselectstart="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()">
+            <section id="sentence"></section>
+            <section id="message"></section>
+            <sectioin id="footer">
+                <button id="btnSolve" onclick="solveSentence()">Solve</button>
+                <button id="btnNext" onclick="nextBoard()">Next</button>
+            </sectioin>
+
+            <script type="text/javascript" src="matrix.words.js"></script>
+            <audio class="audios" id="solveAudio" preload="auto">
+                <source src="https://www.talabulilm.com/istifaadah/templates/audios/click.ogg" type="audio/mpeg">
+            </audio>
+
+            <audio class="audios" id="nextAudio" preload="auto">
+                <source src="https://www.talabulilm.com/istifaadah/templates/audios/coin.wav" type="audio/mpeg">
+            </audio>
+
+        </div>
+    </section>
+
 
     <section class="bottom-navbar-section">
         <nav class="nav">
@@ -60,6 +172,120 @@
     </section>
 
 
+    <script>
+        /**
+         * =====================================================
+         * User configurable data starts from here
+         * =====================================================
+         */
+        var data = ['هذه الصلوة هدية مني اليك يا مولانا محمد واليك يا مولاتنا فاطمة تقبلوها مني وضاعفوا لي بها الاضعاف الجميلة'];
+        var sentenceDir = 'rtl';    // Valid values: 'rtl' or 'ltr'
+
+        var finalMessage = 'Congratulations!<br> You have successfully completed all the sentences.';
+        var finalMessageDir = 'ltr';    // Valid values: 'rtl' or 'ltr'
+
+        var timerSecs = 5;      // set the seconds after solve button is shown
+        /**
+         * =====================================================
+         * DO NOT EDIT BELOW THIS LINE
+         * =====================================================
+         */
+        var sentenceCount = data.length;    // get the count of sentences in the array
+
+        var sentences = shuffle(data);      // get the shuffeled array of sentences
+        var sentence;                       // innitialize the sentence var
+        var currentIndex = 0                // Track the current index of sentence
+        var timer = setTimeout(showSolveBtn, timerSecs * 1000);
+
+        // Actual game code starts
+        $(document).ready(function () {
+            $("#sentence").attr("dir", sentenceDir);
+            setupBoard();
+        });
+
+        function setupBoard() {
+            $('#btnSolve').hide();
+            $('#btnNext').hide();
+            clearTimeout(timer);
+            timer = setTimeout(showSolveBtn, timerSecs * 1000);
+            $("#sentence").css("background-color", "#ffffff");
+
+            sentence = sentences[currentIndex];    // get the first sentence
+
+            var arySentence = sentence.split(" ");
+            var jumbledSentence = shuffle(arySentence);
+
+            $("#sentence").empty();
+            $.each(jumbledSentence, function (i, v) {
+                $("#sentence").append($("<div class=\"draggable\">").text(v + " "));
+            });
+
+            $('.draggable').arrangeable();
+        }
+
+        function shuffle(arra1) {
+            var ctr = arra1.length, temp, index;
+
+            // While there are elements in the array
+            while (ctr > 0) {
+                // Pick a random index
+                index = Math.floor(Math.random() * ctr);
+                // Decrease ctr by 1
+                ctr--;
+                // And swap the last element with it
+                temp = arra1[ctr];
+                arra1[ctr] = arra1[index];
+                arra1[index] = temp;
+            }
+            return arra1;
+        }
+
+        // When user clicks of Solve button, show the correct answer
+        function solveSentence() {
+            $("#sentence").html(sentence);
+            $("#sentence").css("background-color", "#c3ffc3");
+            $('#solveAudio').trigger('play');
+            $('#btnSolve').hide();
+            $('#btnNext').show();
+        }
+
+        function nextBoard() {
+            currentIndex++;
+            $('#message').html($('#message').html() + sentence + "<br>");
+
+            if (currentIndex < sentences.length) {
+                setupBoard();
+            } else {
+                finishGame();
+            }
+            $('#nextAudio').trigger('play');
+        }
+
+        function finishGame() {
+            $("#sentence").attr("dir", finalMessageDir);
+            $('#sentence').html(finalMessage);
+            clearTimeout(timer);
+            $('#btnNext').hide();
+            $('#btnSolve').hide();
+        }
+
+        function showSolveBtn() {
+            $('#btnSolve').show();
+        }
+
+        $('#sentence').bind('mouseup touchend', function () { // Check if sentence is solved
+            var currentSentence = $("#sentence").text().trim();
+
+            var lastIndex = currentSentence.lastIndexOf(" ");
+            currentSentence = currentSentence.substring(0, lastIndex);
+
+            if (currentSentence === sentence) {
+                solveSentence();
+            }
+        });
+    </script>
+    <script src="https://www.talabulilm.com/istifaadah/templates/js/jquery.min.js"></script>
+    <script src="https://www.talabulilm.com/istifaadah/templates/js/drag-arrange.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
