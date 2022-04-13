@@ -37,7 +37,25 @@ function setValues() {
     quizProgressBar.text(percentageQuizProgressBar + "% - Quiz");
     kitProgressBar.text(percentageKitProgressBar + "% - Kit");
 }
+// getuserits
+// function getUserIts() {
+//     let decodedCookie = decodeURIComponent(document.cookie);
+//     let ca = decodedCookie.split(';');
+//     console.log(ca[1]);
+// }
 
+function checkIfAllActivityIsDone() {
+    if (localStorage.getItem('menApparelProgress') == 100
+        && localStorage.getItem('womenApparelProgress') == 100
+        && localStorage.getItem('quizProgress') == 100
+        && localStorage.getItem('kitProgress') == 100) {
+        console.log("completed");
+    } else {
+        console.log("notcompleted");
+    }
+
+}
+checkIfAllActivityIsDone();
 setItems();
 getItems();
 setValues();

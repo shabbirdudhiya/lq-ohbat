@@ -69,51 +69,36 @@
     </section>
 
 
+    <section>
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLable" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-sm-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- ...modal body -->
+                        <img src="img-fluid" style="width: 100%; height: 550px;" class="" id="image-women-apparel"
+                            alt="...">
+                        <!-- ...end modal body -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal -->
+    </section>
+
     <section class="cards">
         <div class="container">
             <div class="my-5 mx-3">
                 <!-- Apparel -->
                 <div class="row">
                     <div class="card-group col-sm">
-                        <div class="card mb-3 mx-2" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
-                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                        focusable="false" role="img" aria-label="Placeholder: Image cap">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#868e96"></rect>
-                                    </svg>
-                                    <!-- <img src="..." class="img-fluid rounded-start" alt="..."> -->
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Jodi</h5>
-                                        <div class="card-text">
-                                            <!-- Checkbox -->
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="appropriate-fitting">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Appropriate Fitting
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="namazi-jodi">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Namazi
-                                                </label>
-                                            </div>
-                                            <!-- Checkbox end -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Topi  -->
                         <div class="card mb-3 mx-2" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
@@ -127,6 +112,46 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
+                                        <h5 class="card-title">Jodi</h5>
+                                        <div class="card-text">
+                                            <!-- Checkbox -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="appropriate-fitting">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Appropriate Fitting
+                                                    <a href="" class="" id="appropriate-fitting-image"
+                                                        data-bs-toggle="modal" data-bs-target="#imageModal">
+                                                        View sample
+                                                    </a>
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="namazi-jodi">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Namazi
+                                                    <a href="" class="" id="namazi-jodi-image" data-bs-toggle="modal"
+                                                        data-bs-target="#imageModal">
+                                                        View sample
+                                                    </a>
+                                                </label>
+                                            </div>
+                                            <!-- Checkbox end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Topi  -->
+                        <div class="card mb-3 mx-2" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
                                         <h5 class="card-title">Jewellery</h5>
                                         <div class="card-text">
                                             <!-- Checkbox -->
@@ -135,6 +160,10 @@
                                                     id="no-imitation">
                                                 <label class=" form-check-label" for="flexCheckDefault">
                                                     No Imitation
+                                                    <a href="" class="" id="no-imitation-image" data-bs-toggle="modal"
+                                                        data-bs-target="#imageModal">
+                                                        View sample
+                                                    </a>
                                                     <span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                             fill="currentColor" class="bi bi-exclamation-circle"
@@ -155,6 +184,10 @@
                                                     id="namazi-jewellery">
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Namazi
+                                                    <a href="" class="" id="namazi-jewellery-image"
+                                                        data-bs-toggle="modal" data-bs-target="#imageModal">
+                                                        View sample
+                                                    </a>
                                                 </label>
                                             </div>
                                             <!-- Checkbox end -->
@@ -171,13 +204,6 @@
                         <div class="card mb-3 mx-2" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
-                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                        focusable="false" role="img" aria-label="Placeholder: Image cap">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#868e96"></rect>
-                                    </svg> -->
-                                    <!-- <img src="..." class="img-fluid rounded-start" alt="..."> -->
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -190,6 +216,10 @@
                                                     id="namazi-spectacles">
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Namazi
+                                                    <a href="" class="" id="namaz-spectacles-image"
+                                                        data-bs-toggle="modal" data-bs-target="#imageModal">
+                                                        View sample
+                                                    </a>
                                                 </label>
                                             </div>
                                             <!-- Checkbox end -->
@@ -222,6 +252,10 @@
                                                     id="bengals-hairband">
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Namazi
+                                                    <a href="" class="" id="namaz-bengals-image" data-bs-toggle="modal"
+                                                        data-bs-target="#imageModal">
+                                                        View sample
+                                                    </a>
                                                 </label>
                                             </div>
                                             <!-- Checkbox end -->
@@ -241,13 +275,6 @@
                         <div class="card mb-3 mx-2" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
-                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                        focusable="false" role="img" aria-label="Placeholder: Image cap">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#868e96"></rect>
-                                    </svg> -->
-                                    <!-- <img src="..." class="img-fluid rounded-start" alt="..."> -->
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -259,6 +286,10 @@
                                                     id="nazami-socks">
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Namazi
+                                                    <a href="" class="" id="nazami-socks-image" data-bs-toggle="modal"
+                                                        data-bs-target="#imageModal">
+                                                        View sample
+                                                    </a>
                                                 </label>
                                             </div>
                                             <!-- Checkbox end -->
@@ -360,6 +391,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="assets/js/women-apparel-progress-bar.js"></script>
+    <script src="assets/js/change-image-women.js"></script>
 
 </body>
 
