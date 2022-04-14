@@ -37,6 +37,12 @@ function setValues() {
     womenApperalProgressBar.text(percentageWomenApperalProgressBar + "% - Women");
     quizProgressBar.text(percentageQuizProgressBar + "% - Quiz");
     kitProgressBar.text(percentageKitProgressBar + "% - Kit");
+    
+    // Set Progress bar
+    menApperalProgressBar.css("width",percentageMenApperalProgress + "%");
+    womenApperalProgressBar.css("width",percentageWomenApperalProgressBar + "%");
+    quizProgressBar.css("width",percentageQuizProgressBar + "%");
+    kitProgressBar.css("width",percentageKitProgressBar + "%");
 }
 
 setItems();
