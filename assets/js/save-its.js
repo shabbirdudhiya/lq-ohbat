@@ -16,12 +16,16 @@ function saveUserIts() {
             $.get(url, function (data, status) { })
             localStorage.removeItem("isItsSaved");
             localStorage.setItem("isItsSaved", true);
-        } else {
-            console.log("its already saved");
         }
-    } else {
-        console.log("Not completed.");
+        // else {
+        //     return;
+        //     console.log("its already saved");
+        // }
     }
+    // else {
+    //     return;
+    //     console.log("Not completed.");
+    // }
 
 }
 saveUserIts();
