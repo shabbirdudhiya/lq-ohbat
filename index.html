@@ -11,6 +11,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/bottom-navbar.css">
+    <link rel="stylesheet" href="assets/css/stepper.css">
     <title>LQ- Ohbat</title>
     <style>
         .desktop-msg {
@@ -31,7 +32,7 @@
 
 <body>
     <section class="main">
-
+        <br>
         <!-- <br> -->
         <section class="float-section">
             <p class="arabic-text p-2 text-center" style="font-size: 25px;">ليلة القدر اهبة 1443
@@ -56,7 +57,83 @@
                 <center>
                     <hr style="width: 50%;">
                 </center>
-                <div class="master-progress-section">
+            </div>
+        </section>
+
+
+        <section class="stepper">
+            <div class="container">
+                <!-- Stepper HTML -->
+                <div class="step step1 step-active">
+                    <div>
+                        <div class="circle">1<i class="fa fa-check"></i></div>
+                    </div>
+                    <div>
+                        <div class="title">Apparel</div>
+                        <div class="caption">
+                            <div class="progress my-1 mx-1" style="height: 23px;">
+                                <div class="progress-bar progress-bar-striped" role="progressbar"
+                                    id="men-apperal-progress-bar" aria-valuenow="25" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                </div>
+                            </div>
+                            <div class="progress my-1 mx-1" style="height: 23px;">
+                                <div class="progress-bar bg-danger progress-bar-striped" role="progressbar"
+                                    id="women-apperal-progress-bar" aria-valuenow="25" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step step2">
+                    <div>
+                        <div class="circle">2</div>
+                    </div>
+                    <div>
+                        <div class="title">Quiz</div>
+                        <div class="caption">
+                            <div class="progress my-1 mx-1" style="height: 23px;">
+                                <div class="progress-bar bg-warning progress-bar-striped" role="progressbar"
+                                    id="quiz-progress-bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step step3">
+                    <div>
+                        <div class="circle">3</div>
+                    </div>
+                    <div>
+                        <div class="title">Kit</div>
+                        <div class="caption">
+                            <div class="progress my-1 mx-1" style="height: 23px;">
+                                <div class="progress-bar bg-success progress-bar-striped" role="progressbar"
+                                    id="kit-progress-bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step step4">
+                    <div>
+                        <div class="circle">4</div>
+                    </div>
+                    <div>
+                        <div class="title">Tasbeeh</div>
+                        <div class="caption">
+                            Memorise Tasbeeh
+                        </div>
+                    </div>
+                </div>
+                <!-- End Stepper HTML -->
+            </div>
+        </section>
+        <br>
+
+        <!-- <div class="master-progress-section">
                     <div class="progress my-1 mx-1" style="height: 23px;">
                         <div class="progress-bar progress-bar-striped" role="progressbar" id="men-apperal-progress-bar"
                             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -74,9 +151,7 @@
                         <div class="progress-bar bg-success progress-bar-striped" role="progressbar"
                             id="kit-progress-bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </div> -->
 
         <section class="cards-section">
             <div class="container">
@@ -229,6 +304,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/save-its.js"></script>
+    <script src="assets/js/stepper.js"></script>
     <script src="assets/js/toggle-full-screen.js"></script>
 </body>
 
