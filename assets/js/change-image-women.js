@@ -9,7 +9,7 @@ $(document).ready(function () {
             case 'namaz-jodi-image':
                 $('#image-women-apparel').attr('src', '');
                 break;
-            case 'no-imitation-image':
+            case 'mehndi-image':
                 $('#image-women-apparel').attr('src', '');
                 break;
             case 'namazi-jewellery-image':
