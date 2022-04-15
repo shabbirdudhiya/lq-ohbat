@@ -7,9 +7,9 @@ $(document).ready(function () {
   var bukhoor = document.getElementById("bukhoor");
   var starchTopi = document.getElementById("starch-topi");
   var nazamiTopi = document.getElementById("namazi-topi");
-  var nazamiSpectacles = document.getElementById("namazi-spectacles");
+  var nazamiSpectacles = document.getElementById("namazi-spectacles-men");
   var nazamiTaweez = document.getElementById("nazami-taweez");
-  var nazamiSocks = document.getElementById("nazami-socks");
+  var nazamiSocks = document.getElementById("nazami-socks-men");
   var whiteSocks = document.getElementById("white-socks");
 
   var menApparelVars = [

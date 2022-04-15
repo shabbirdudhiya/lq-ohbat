@@ -11,9 +11,9 @@ let clearMenChecklist = $("#btn-clear-checklist-men").on("click", function () {
     localStorage.removeItem("bukhoor");
     localStorage.removeItem("starch-topi");
     localStorage.removeItem("namazi-topi");
-    localStorage.removeItem("namazi-spectacles");
+    localStorage.removeItem("namazi-spectacles-men");
     localStorage.removeItem("nazami-taweez");
-    localStorage.removeItem("nazami-socks");
+    localStorage.removeItem("nazami-socks-men");
     localStorage.removeItem("white-socks");
     localStorage.removeItem("menApparelProgress");
     localStorage.removeItem("menApparelNotApplicable");
