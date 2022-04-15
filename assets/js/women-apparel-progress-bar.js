@@ -79,7 +79,6 @@ $(document).ready(function () {
   function showCompletedCheck() {
     window.scrollTo({ top: 0, behavior: "smooth" });
     $(".check-women-apparel").css("display", "block");
-    $(".confetti").delay(3000).hide(1);
   }
 
   function getLocalStorageData() {
