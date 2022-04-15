@@ -2,7 +2,7 @@ $(document).ready(function () {
   // save checkboxes
   var appropriateFitting = document.getElementById("appropriate-fitting");
   var nazamiJodi = document.getElementById("namazi-jodi");
-  // var noImitationJewellery = document.getElementById('no-imitation')
+  var mehndi = document.getElementById("mehndi");
   var namaziJewellery = document.getElementById("namazi-jewellery");
   var nazamiSpectacles = document.getElementById("namazi-spectacles");
   var nazamiBengalsHairband = document.getElementById("bengals-hairband");
@@ -11,6 +11,7 @@ $(document).ready(function () {
   var womenApparelVars = [
     appropriateFitting,
     nazamiJodi,
+    mehndi,
     namaziJewellery,
     nazamiSpectacles,
     nazamiBengalsHairband,
