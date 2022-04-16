@@ -2,7 +2,7 @@ var menApperalProgress;
 var womenApperalProgress;
 var quizProgress;
 var kitProgress;
-
+var tasbeehProgress;
 function setItems() {
   if (
     localStorage.getItem("menApparelProgress") &&
@@ -24,6 +24,7 @@ function getItems() {
   womenApperalProgress = localStorage.getItem("womenApparelProgress");
   quizProgress = localStorage.getItem("quizProgress");
   kitProgress = localStorage.getItem("kitProgress");
+  tasbeehProgress = localStorage.getItem("tasbeehProgress");
 }
 
 function setValues() {
@@ -90,7 +91,19 @@ function setValues() {
   // quizProgressBar.css("width",percentageQuizProgressBar + "%");
   //   kitProgressBar.css("width", percentageKitProgressBar + "%");
 }
+function showJumbotorn() {
+  if (
+    menApperalProgress == 100 &&
+    womenApperalProgress == 100 &&
+    quizProgress == 100 &&
+    kitProgress == 100 &&
+    tasbeehProgress == "completed"
+  ) {
+    $(".jumbotron-section").show();
+  }
+}
 
 setItems();
 getItems();
 setValues();
+showJumbotorn();
