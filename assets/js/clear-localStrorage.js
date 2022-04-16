@@ -58,6 +58,7 @@ let clearQuiz = $("#btn-clear-quiz").on("click", function () {
     localStorage.setItem("isItsSaved", false);
   }
 });
+
 let clearKit = $("#btn-clear-kit").on("click", function () {
   if (clearQuiz) {
     $(".clear-msg").css("display", "block");
@@ -77,5 +78,13 @@ let clearKit = $("#btn-clear-kit").on("click", function () {
     localStorage.removeItem("tosho");
     localStorage.setItem("kitProgress", 0);
     localStorage.setItem("isItsSaved", false);
+  }
+});
+
+let clearTasbeeh = $("#btn-clear-tasbeeh").on("click", function () {
+  if (clearTasbeeh) {
+    $(".clear-msg").css("display", "block");
+    $("#btn-clear-tasbeeh").attr("disabled", true);
+    localStorage.removeItem("tasbeehProgress");
   }
 });

@@ -17,7 +17,13 @@ if (
     $(".step3").addClass("step-completed");
     $(".step4").addClass("step-active");
   }
-  if (localStorage.getItem("kitProgress") == "completed") {
+  if (
+    localStorage.getItem("menApparelProgress") == 100 &&
+    localStorage.getItem("womenApparelProgress") == 100 &&
+    localStorage.getItem("quizProgress") == 100 &&
+    localStorage.getItem("kitProgress") == 100 &&
+    localStorage.getItem("tasbeehProgress") == "completed"
+  ) {
     $(".step4").removeClass("step-active");
     $(".step4").addClass("step-completed");
     $(".step5").addClass("step-completed");
