@@ -17,4 +17,9 @@ if (
     $(".step3").addClass("step-completed");
     $(".step4").addClass("step-active");
   }
+  if (localStorage.getItem("kitProgress") == "completed") {
+    $(".step4").removeClass("step-active");
+    $(".step4").addClass("step-completed");
+    $(".step5").addClass("step-completed");
+  }
 }

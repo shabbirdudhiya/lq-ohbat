@@ -43,7 +43,7 @@ function setValues() {
 
   if (percentageMenApperalProgress == 0) {
     menApperalProgressBar.text("Men");
-    menApperalProgressBar.css("width", "100" + "%");
+    // menApperalProgressBar.css("width", "100" + "%");
   } else {
     menApperalProgressBar.text(percentageMenApperalProgress + "% -  Men");
     menApperalProgressBar.css("width", percentageMenApperalProgress + "%");
@@ -51,7 +51,7 @@ function setValues() {
 
   if (percentageWomenApperalProgressBar == 0) {
     womenApperalProgressBar.text("Women");
-    womenApperalProgressBar.css("width", "100" + "%");
+    // womenApperalProgressBar.css("width", "100" + "%");
   } else {
     womenApperalProgressBar.text(
       percentageWomenApperalProgressBar + "% - Women"
@@ -64,7 +64,7 @@ function setValues() {
 
   if (percentageQuizProgressBar == 0) {
     quizProgressBar.text("Quiz");
-    quizProgressBar.css("width", "100" + "%");
+    // quizProgressBar.css("width", "100" + "%");
   } else {
     quizProgressBar.text(percentageQuizProgressBar + "% - Quiz");
     quizProgressBar.css("width", percentageQuizProgressBar + "%");
@@ -72,7 +72,7 @@ function setValues() {
 
   if (percentageKitProgressBar == 0) {
     kitProgressBar.text("Kit");
-    kitProgressBar.css("width", "100" + "%");
+    // kitProgressBar.css("width", "10" + "%");
   } else {
     kitProgressBar.text(percentageKitProgressBar + "% - Kit");
     kitProgressBar.css("width", percentageKitProgressBar + "%");
