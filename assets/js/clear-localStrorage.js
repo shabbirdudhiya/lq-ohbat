@@ -70,7 +70,7 @@ let clearKit = $("#btn-clear-kit").on("click", function () {
     localStorage.removeItem("munajaat-shareefah");
     localStorage.removeItem("bihori-hafti");
     localStorage.removeItem("fajr-hafti");
-    localStorage.removeItem("silat-al-imam");
+    localStorage.removeItem("list-of-dua");
     localStorage.removeItem("nazr-al-maqam");
     localStorage.removeItem("najwa");
     localStorage.removeItem("qardanhasanah");

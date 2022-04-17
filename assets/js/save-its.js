@@ -3,11 +3,12 @@ function getUserIts() {
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(";");
   console.log(ca[1]);
+  return ca;
 }
 
 function saveUserIts() {
-  // let userIts = getUserIts();
-  let userIts = 50480062;
+  let userIts = getUserIts();
+  // let userIts = 50480062;
 
   if (
     localStorage.getItem("menApparelProgress") == 100 &&

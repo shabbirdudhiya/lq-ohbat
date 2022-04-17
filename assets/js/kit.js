@@ -6,7 +6,7 @@ $(document).ready(function () {
     var munajaatShareefah = document.getElementById('munajaat-shareefah')
     var bihoriHafti = document.getElementById('bihori-hafti')
     var fajrHafti = document.getElementById('fajr-hafti')
-    var silatAlImam = document.getElementById('silat-al-imam')
+    var silatAlImam = document.getElementById('list-of-dua')
     var nazrAlMaqam = document.getElementById('nazr-al-maqam')
     var najwa = document.getElementById('najwa')
     var qardanhasanah = document.getElementById('qardanhasanah')
@@ -50,7 +50,7 @@ $(document).ready(function () {
 
                     // Disable Checkbox
                     $('#' + element.id).attr("disabled", true)
-                    $('#progressbarMenApparel').css('width', percentage + '%').attr('aria-valuenow', percentage).html(percentage + "%");
+                    $('#progressbarKit').css('width', percentage + '%').attr('aria-valuenow', percentage).html(percentage + "%");
                     localStorage.setItem('kitProgress', percentage)
                     if (percentage == 100) {
                         showCompletedCheck(percentage);
