@@ -8,6 +8,11 @@
     src: url('../fonts/SFUIText-Regular.ttf');
 }
 
+@font-face {
+    font-family: Diwan-Thuluth;
+    src: url('../fonts/thuluth.ttf');
+}
+
 .arabic-text {
     font-family: Kanz-al-Marjaan;
     /* font-size: 30px; */
@@ -16,6 +21,17 @@
     /* text-align: center; */
     text-transform: uppercase;
     display: block;
+}
+
+.arabic-text-heading {
+    font-family: Diwan-Thuluth;
+    /* font-size: 30px; */
+    line-height: 1.2;
+    direction: rtl;
+    font-size: 30px;
+    /* text-align: center; */
+    /* text-transform: uppercase; */
+    /* display: block; */
 }
 
 .sticky {
