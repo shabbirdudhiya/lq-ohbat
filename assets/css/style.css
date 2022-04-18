@@ -20,6 +20,7 @@
     z-index: 100;
 
 }
+
 .small-heading {
     font-size: 17px;
 }
@@ -31,6 +32,8 @@
 .btn-1 {
     background-color: #31D2F2;
 }
+
 body {
     background-color: #f8f8ff;
+    color: #4d5c6d;
 }
