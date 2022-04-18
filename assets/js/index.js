@@ -42,54 +42,54 @@ function setValues() {
   percentageQuizProgressBar = parseInt((quizProgress / 100) * 100, 10);
   percentageKitProgressBar = parseInt((kitProgress / 100) * 100, 10);
 
-  if (percentageMenApperalProgress == 0) {
-    menApperalProgressBar.text("Men");
-    // menApperalProgressBar.css("width", "100" + "%");
-  } else {
-    menApperalProgressBar.text(percentageMenApperalProgress + "% -  Men");
-    menApperalProgressBar.css("width", percentageMenApperalProgress + "%");
-  }
+  // if (percentageMenApperalProgress == 0) {
+  //   menApperalProgressBar.text("Men");
+  //   // menApperalProgressBar.css("width", "100" + "%");
+  // } else {
+  //   menApperalProgressBar.text(percentageMenApperalProgress + "% -  Men");
+  //   menApperalProgressBar.css("width", percentageMenApperalProgress + "%");
+  // }
 
-  if (percentageWomenApperalProgressBar == 0) {
-    womenApperalProgressBar.text("Women");
-    // womenApperalProgressBar.css("width", "100" + "%");
-  } else {
-    womenApperalProgressBar.text(
-      percentageWomenApperalProgressBar + "% - Women"
-    );
-    womenApperalProgressBar.css(
-      "width",
-      percentageWomenApperalProgressBar + "%"
-    );
-  }
+  // if (percentageWomenApperalProgressBar == 0) {
+  //   womenApperalProgressBar.text("Women");
+  //   // womenApperalProgressBar.css("width", "100" + "%");
+  // } else {
+  //   womenApperalProgressBar.text(
+  //     percentageWomenApperalProgressBar + "% - Women"
+  //   );
+  //   womenApperalProgressBar.css(
+  //     "width",
+  //     percentageWomenApperalProgressBar + "%"
+  //   );
+  // }
 
-  if (percentageQuizProgressBar == 0) {
-    quizProgressBar.text("Quiz");
-    // quizProgressBar.css("width", "100" + "%");
-  } else {
-    quizProgressBar.text(percentageQuizProgressBar + "% - Quiz");
-    quizProgressBar.css("width", percentageQuizProgressBar + "%");
-  }
+  // if (percentageQuizProgressBar == 0) {
+  //   quizProgressBar.text("Quiz");
+  //   // quizProgressBar.css("width", "100" + "%");
+  // } else {
+  //   quizProgressBar.text(percentageQuizProgressBar + "% - Quiz");
+  //   quizProgressBar.css("width", percentageQuizProgressBar + "%");
+  // }
 
-  if (percentageKitProgressBar == 0) {
-    kitProgressBar.text("Kit");
-    // kitProgressBar.css("width", "10" + "%");
-  } else {
-    kitProgressBar.text(percentageKitProgressBar + "% - Kit");
-    kitProgressBar.css("width", percentageKitProgressBar + "%");
-  }
+  // if (percentageKitProgressBar == 0) {
+  //   kitProgressBar.text("Kit");
+  //   // kitProgressBar.css("width", "10" + "%");
+  // } else {
+  //   kitProgressBar.text(percentageKitProgressBar + "% - Kit");
+  //   kitProgressBar.css("width", percentageKitProgressBar + "%");
+  // }
 
   // Set html
-  // menApperalProgressBar.text(percentageMenApperalProgress + "% -  Men");
-  // womenApperalProgressBar.text(percentageWomenApperalProgressBar + "% - Women");
-  // quizProgressBar.text(percentageQuizProgressBar + "% - Quiz");
-  //   kitProgressBar.text(percentageKitProgressBar + "% - Kit");
+  menApperalProgressBar.text(percentageMenApperalProgress + "% -  Men");
+  womenApperalProgressBar.text(percentageWomenApperalProgressBar + "% - Women");
+  quizProgressBar.text(percentageQuizProgressBar + "% - Quiz");
+    kitProgressBar.text(percentageKitProgressBar + "% - Kit");
 
   // Set Progress bar
-  // menApperalProgressBar.css("width",percentageMenApperalProgress + "%");
-  // womenApperalProgressBar.css("width",percentageWomenApperalProgressBar + "%");
-  // quizProgressBar.css("width",percentageQuizProgressBar + "%");
-  //   kitProgressBar.css("width", percentageKitProgressBar + "%");
+  menApperalProgressBar.css("width",percentageMenApperalProgress + "%");
+  womenApperalProgressBar.css("width",percentageWomenApperalProgressBar + "%");
+  quizProgressBar.css("width",percentageQuizProgressBar + "%");
+  kitProgressBar.css("width", percentageKitProgressBar + "%");
 }
 function showJumbotorn() {
   if (

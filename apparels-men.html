@@ -19,308 +19,313 @@
 </head>
 
 <body>
-    <div class="container my-3">
-        <center>
-            <h2>
-                Checklist
-                <span>
-                    <img src="assets/svg/checklist_black_24dp.svg" alt="" srcset="">
-                </span>
-            </h2>
-        </center>
-    </div>
-    <section class="progress-bar-section sticky">
-        <center>
-            <div class="container">
-                <div class="progress">
-                    <div class="progress-bar" id="progressbarMenApparel" role="progressbar" style="width: 0%;"
-                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-                </div>
-                <!-- Completed Check -->
-                <div class="container my-3">
+    <div class="container">
 
-                    <span class="check-men-apparel" style="display: none;">
-                        <h4>Checklist Completed!</h4>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red"
-                            class="bi bi-check-all" viewBox="0 0 16 16">
-                            <path
-                                d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z" />
-                        </svg>
+        <div class="container my-3">
+            <center>
+                <h2>
+                    Checklist
+                    <span>
+                        <img src="assets/svg/checklist_black_24dp.svg" alt="" srcset="">
                     </span>
+                </h2>
+            </center>
+        </div>
+        <section class="progress-bar-section sticky">
+            <center>
+                <div class="container">
+                    <div class="progress">
+                        <div class="progress-bar" id="progressbarMenApparel" role="progressbar" style="width: 0%;"
+                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                    </div>
+                    <!-- Completed Check -->
+                    <div class="container my-3">
+
+                        <span class="check-men-apparel" style="display: none;">
+                            <h4>Checklist Completed!</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red"
+                                class="bi bi-check-all" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </center>
+        </section>
+
+        <section class="notapplicablesection">
+            <div class="container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="" id="not-applicable">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Not Applicable
+                        (<small>Select if you are not submitting men's checklist</small>)
+                    </label>
                 </div>
             </div>
-        </center>
-    </section>
+        </section>
 
-    <section class="notapplicablesection">
-        <div class="container">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" value="" id="not-applicable">
-                <label class="form-check-label" for="flexCheckDefault">
-                    Not Applicable
-                    (<small>Select if you are not submitting men's checklist</small>)
-                </label>
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLable" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-sm-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- ...modal body -->
+                        <img src="img-fluid" style="width: 100%; height: 550px;" class="" id="image-men-apparel"
+                            alt="...">
+                        <!-- ...end modal body -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+        <!-- end modal -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLable" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen-sm-down">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- ...modal body -->
-                    <img src="img-fluid" style="width: 100%; height: 550px;" class="" id="image-men-apparel" alt="...">
-                    <!-- ...end modal body -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end modal -->
-
-    <section class="cards">
-        <div class="container">
-            <div class="my-5 mx-3">
-                <!-- Apparel -->
-                <div class="row">
-                    <div class="card-group col-sm">
-                        <div class="card mb-3 mx-2" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Pehran</h5>
-                                        <div class="card-text">
-                                            <!-- Checkbox -->
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="plain-cloth">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Plain Cloth
-                                                    <!-- <a href="" class="" id="plain-cloth-image" data-bs-toggle="modal"
+        <section class="cards">
+            <div class="container">
+                <div class="my-5 mx-3">
+                    <!-- Apparel -->
+                    <div class="row">
+                        <div class="card-group col-sm">
+                            <div class="card mb-3 mx-2" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pehran</h5>
+                                            <div class="card-text">
+                                                <!-- Checkbox -->
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="plain-cloth">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Plain Cloth
+                                                        <!-- <a href="" class="" id="plain-cloth-image" data-bs-toggle="modal"
                                                         data-bs-target="#imageModal">
                                                         View sample
                                                     </a> -->
-                                                </label>
-                                            </div>
+                                                    </label>
+                                                </div>
 
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="starch-cloth">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Starch
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="starch-cloth">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Starch
 
-                                                </label>
-                                                <!-- <a href="" class="" id="starch-cloth-image" id="starch-cloth-image"
+                                                    </label>
+                                                    <!-- <a href="" class="" id="starch-cloth-image" id="starch-cloth-image"
                                                     data-bs-toggle="modal" data-bs-target="#imageModal">
                                                     View sample
                                                 </a> -->
-                                            </div>
+                                                </div>
 
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="cloth-button">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Cloth Button
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="cloth-button">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Cloth Button
 
-                                                </label>
-                                                <!-- <a href="" class="" id="cloth-button-image" id="starch-cloth-image"
+                                                    </label>
+                                                    <!-- <a href="" class="" id="cloth-button-image" id="starch-cloth-image"
                                                     data-bs-toggle="modal" data-bs-target="#imageModal">
                                                     View sample
                                                 </a> -->
-                                            </div>
+                                                </div>
 
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="without-pockets">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Without Pockets
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="without-pockets">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Without Pockets
 
-                                                </label>
-                                                <!-- <a href="" class="" id="without-pockets-image" id="starch-cloth-image"
+                                                    </label>
+                                                    <!-- <a href="" class="" id="without-pockets-image" id="starch-cloth-image"
                                                     data-bs-toggle="modal" data-bs-target="#imageModal">
                                                     View sample
                                                 </a> -->
-                                            </div>
+                                                </div>
 
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="bukhoor">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Use Incense(Bukhoor)
-                                                </label>
-                                                <!-- <a href="" class="" id="bukhoor-image" data-bs-toggle="modal"
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="bukhoor">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Use Incense(Bukhoor)
+                                                    </label>
+                                                    <!-- <a href="" class="" id="bukhoor-image" data-bs-toggle="modal"
                                                     data-bs-target="#imageModal">
                                                     View sample
                                                 </a> -->
+                                                </div>
+                                                <!-- Checkbox end -->
                                             </div>
-                                            <!-- Checkbox end -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!--Topi  -->
-                        <div class="card mb-3 mx-2" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Topi</h5>
-                                        <div class="card-text">
-                                            <!-- Checkbox -->
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="starch-topi">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Starch
-                                                    <!-- <a href="" class="" id="starch-topi-image" data-bs-toggle="modal"
+                            <!--Topi  -->
+                            <div class="card mb-3 mx-2" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Topi</h5>
+                                            <div class="card-text">
+                                                <!-- Checkbox -->
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="starch-topi">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Starch
+                                                        <!-- <a href="" class="" id="starch-topi-image" data-bs-toggle="modal"
                                                         data-bs-target="#imageModal">
                                                         View sample
                                                     </a> -->
-                                                </label>
-                                            </div>
+                                                    </label>
+                                                </div>
 
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="namazi-topi">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Namazi
-                                                    <!-- <a href="" class="" id="namazi-topi-image" data-bs-toggle="modal"
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="namazi-topi">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Namazi
+                                                        <!-- <a href="" class="" id="namazi-topi-image" data-bs-toggle="modal"
                                                         data-bs-target="#imageModal">
                                                         View sample
                                                     </a> -->
-                                                </label>
+                                                    </label>
+                                                </div>
+                                                <!-- Checkbox end -->
                                             </div>
-                                            <!-- Checkbox end -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--Ring  -->
-                <div class="row">
-                    <div class="card-group col-sm">
-                        <div class="card mb-3 mx-2" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Spectacles</h5>
-                                        <div class="card-text">
-                                            <!-- Checkbox -->
+                    <!--Ring  -->
+                    <div class="row">
+                        <div class="card-group col-sm">
+                            <div class="card mb-3 mx-2" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Spectacles</h5>
+                                            <div class="card-text">
+                                                <!-- Checkbox -->
 
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="namazi-spectacles-men">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Namazi
-                                                    <!-- <a href="" class="" id="namaz-spectacles-image"
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="namazi-spectacles-men">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Namazi
+                                                        <!-- <a href="" class="" id="namaz-spectacles-image"
                                                         data-bs-toggle="modal" data-bs-target="#imageModal">
                                                         View sample
                                                     </a> -->
-                                                </label>
+                                                    </label>
+                                                </div>
+                                                <!-- Checkbox end -->
                                             </div>
-                                            <!-- Checkbox end -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!--  -->
-                        <div class="card mb-3 mx-2" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Taweez</h5>
-                                        <div class="card-text">
-                                            <!-- Checkbox -->
+                            <!--  -->
+                            <div class="card mb-3 mx-2" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Taweez</h5>
+                                            <div class="card-text">
+                                                <!-- Checkbox -->
 
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="nazami-taweez">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Namazi
-                                                    <!-- <a href="" class="" id="taweez-image" data-bs-toggle="modal"
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="nazami-taweez">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Namazi
+                                                        <!-- <a href="" class="" id="taweez-image" data-bs-toggle="modal"
                                                         data-bs-target="#imageModal">
                                                         View sample
                                                     </a> -->
-                                                </label>
+                                                    </label>
+                                                </div>
+                                                <!-- Checkbox end -->
                                             </div>
-                                            <!-- Checkbox end -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--Ring  -->
+                            <!--Ring  -->
 
-                    </div>
-                </div>
-                <!--  -->
-                <!--Taweez  -->
-                <div class="row">
-                    <div class="card-group col-sm">
-                        <div class="card mb-3 mx-2" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Socks</h5>
-                                        <div class="card-text">
-                                            <!-- Checkbox -->
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="nazami-socks-men">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Namazi
-                                                    <!-- <a href="" class="" id="socks-namazi-image" data-bs-toggle="modal"
-                                                        data-bs-target="#imageModal">
-                                                        View sample
-                                                    </a> -->
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="white-socks">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    White Socks
-                                                    <!-- <a href="" class="" id="socks-white-image" data-bs-toggle="modal"
-                                                        data-bs-target="#imageModal">
-                                                        View sample
-                                                    </a> -->
-                                                </label>
-                                            </div>
-                                            <!-- Checkbox end -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                    <!--  -->
+                    <!--Taweez  -->
+                    <div class="row">
+                        <div class="card-group col-sm">
+                            <div class="card mb-3 mx-2" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Socks</h5>
+                                            <div class="card-text">
+                                                <!-- Checkbox -->
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="nazami-socks-men">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Namazi
+                                                        <!-- <a href="" class="" id="socks-namazi-image" data-bs-toggle="modal"
+                                                        data-bs-target="#imageModal">
+                                                        View sample
+                                                    </a> -->
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="white-socks">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        White Socks
+                                                        <!-- <a href="" class="" id="socks-white-image" data-bs-toggle="modal"
+                                                        data-bs-target="#imageModal">
+                                                        View sample
+                                                    </a> -->
+                                                    </label>
+                                                </div>
+                                                <!-- Checkbox end -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!-- End -->
                 </div>
-                <!--  -->
-                <!-- End -->
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <section class="bottom-navbar-section">
         <nav class="nav">
