@@ -8,7 +8,6 @@ function getUserIts() {
 
 function saveUserIts() {
   let userIts = getUserIts();
-  // let userIts = 50480062;
 
   if (
     localStorage.getItem("menApparelProgress") == 100 &&
