@@ -1,9 +1,8 @@
 // getuserits
 function getUserIts() {
   let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(";");
-  console.log(ca[1]);
-  return ca;
+  let ca = decodedCookie.split("user_its=");
+  return ca[1];
 }
 
 function saveUserIts() {
