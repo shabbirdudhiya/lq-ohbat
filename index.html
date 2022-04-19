@@ -33,6 +33,10 @@ require_once '../requires_login.php';
             border: 1px solid rgba(0, 0, 0, .125);
             border-radius: 0.25rem;
         }
+
+        .li-instructions {
+            font-size: 15px;
+        }
     </style>
     <title>LQ- Ohbat</title>
 </head>
@@ -91,7 +95,7 @@ require_once '../requires_login.php';
             <div class="conatainer mx-2 p-2">
                 <div class="alert alert-secondary alert-dismissible fade show" role="alert">
                     <!-- <strong></strong> -->
-                    <p>
+                    <p class="instruction-heading" style="font-size:17px">
                         <b>
                             Complete each section in the progress bar given below to complete your preparations for
                             Lailatul
@@ -99,19 +103,21 @@ require_once '../requires_login.php';
                         </b>
                     </p>
                     <ul>
-                        <li>
+                        <li class="li-instructions">
                             Review your ‘Lailatul Qadr libaas checklist.
                         </li>
-                        <li>
+                        <li class="li-instructions">
                             Go through the critical amal instructions.
                         </li>
-                        <li>
+                        <li class="li-instructions">
                             Prepare your jholnu.
                         </li>
-                        <li>
+                        <li class="li-instructions">
                             Memorize the tasbeeh (Hazehi Salah)
                         </li>
-                        Your preparations will be recorded and presented in Hazrat Aaliyah for Dua Mubarak.
+                        <p class="li-instructions">
+                            Your preparations will be recorded and presented in Hazrat Aaliyah for Dua Mubarak.
+                        </p>
                     </ul>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
