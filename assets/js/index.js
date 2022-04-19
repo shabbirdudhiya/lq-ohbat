@@ -45,10 +45,10 @@ function setValues() {
   percentageKitProgressBar = parseInt((kitProgress / 100) * 100, 10);
 
   // Set html
-  menApperalProgressBar.text(percentageMenApperalProgress + "% -  Men");
-  womenApperalProgressBar.text(percentageWomenApperalProgressBar + "% - Women");
-  quizProgressBar.text(percentageQuizProgressBar + "% - Quiz");
-    kitProgressBar.text(percentageKitProgressBar + "% - Kit");
+  menApperalProgressBar.text(percentageMenApperalProgress + "% -  Mard");
+  womenApperalProgressBar.text(percentageWomenApperalProgressBar + "% - Bairo");
+  quizProgressBar.text(percentageQuizProgressBar + "% - Amal");
+    kitProgressBar.text(percentageKitProgressBar + "% - Jholnu");
 
   // Set Progress bar
   menApperalProgressBar.css("width",percentageMenApperalProgress + "%");
