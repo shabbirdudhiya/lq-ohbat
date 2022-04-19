@@ -1,34 +1,41 @@
+$(document).ready(function () {
+$('#men-apparel-link').hide()
+$('#women-apparel-link').hide()
 
-// Gender Code
-  // Radio buttons
+  $('#male, #female').click(function(){
+    //set localStorage 
+    btnID = $(this).attr('id');
+    localStorage.setItem('gender', btnID);
+      localStorage.removeItem('showModal');
+      localStorage.setItem('showModal', false);
+      // Close modal
+      $('#btn-close-modal').click()
+      if (btnID == "male") {
+        $('#men-apparel-link').show();
+        $('.womenprogressbar').css('display', 'none');
+      } else if (btnID == "female") {
+        $('#women-apparel-link').show();
+        $('.menprogressbar').css('display', 'none');
+      }
+      checkGender();
+  });
 
-$('#male').click(function () {
-  genderRadioButton = $(this).attr('id');
-  localStorage.setItem('gender', genderRadioButton)
-  localStorage.removeItem('showModal');
-  localStorage.setItem('showModal', false);
-  document.getElementById('btn-close-modal').click()
+  function checkGender() {
+    if (localStorage.getItem("gender") == "male") {
+      $('#men-apparel-link').show();
+      $('.womenprogressbar').css('display', 'none');  
+      // set a href
+      $('.libas-a-href').attr("href", "apparels-men.html");
+      // set localStorage of other gender
+      localStorage.setItem("womenApparelProgress", 100);
+    } else if (localStorage.getItem("gender") == "female") {
+      $('#women-apparel-link').show();
+      $('.menprogressbar').css('display', 'none');
+      // set a href
+      $('.libas-a-href').attr("href", "apparels-women.html");  
+      // set localStorage of other gender
+      localStorage.setItem("menApparelProgress", 100);
+    }    
+  }
+  checkGender();
 })
-$('#female').click(function () {
-    genderRadioButton = $(this).attr('id');
-    localStorage.setItem('gender', genderRadioButton)
-    localStorage.removeItem('showModal');
-    localStorage.setItem('showModal', false);
-    document.getElementById('btn-close-modal').click()
-});
-function checkGender() {
-    if (localStorage.getItem("gender") === "male") {
-        $('.women-apperal').hide();
-        $('.womenprogressbar').hide();
-        localStorage.setItem("womenApparelProgress", 100);
-        $('.libas-a-href').attr("href", "apparels-men.html");
-    } else {
-        $('.men-apperal').hide();
-        $('.menprogressbar').hide();
-        localStorage.setItem("menApparelProgress", 100);
-        $('.libas-a-href').attr("href", "apparels-women.html");
-    }
-    
-}
-
-checkGender();

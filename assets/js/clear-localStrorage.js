@@ -94,6 +94,55 @@ let resetGender = $("#btn-reset-gender").on("click", function () {
     $("#btn-reset-gender").attr("disabled", true);
     localStorage.removeItem("gender");
     localStorage.removeItem("showModal");
-    localStorage.setItem("showModal",true);
+    localStorage.setItem("showModal", true);
+    
+
+    localStorage.removeItem("namazi-sujni-masallah");
+    localStorage.removeItem("namazi-tasbeeh");
+    localStorage.removeItem("namazi-rumaal");
+    localStorage.removeItem("munajaat-shareefah");
+    localStorage.removeItem("bihori-hafti");
+    localStorage.removeItem("fajr-hafti");
+    localStorage.removeItem("list-of-dua");
+    localStorage.removeItem("nazr-al-maqam");
+    localStorage.removeItem("najwa");
+    localStorage.removeItem("qardanhasanah");
+    localStorage.removeItem("faiz-al-mawaid-al-burhaniyah");
+    localStorage.removeItem("tosho");
+    localStorage.setItem("kitProgress", 0);
+    localStorage.setItem("isItsSaved", false);
+    
+    localStorage.removeItem("opt3");
+    localStorage.removeItem("opt5");
+    localStorage.removeItem("opt12");
+    localStorage.removeItem("opt14");
+    localStorage.setItem("quizProgress", 0);
+    
+      localStorage.removeItem("appropriate-fitting");
+      localStorage.removeItem("namazi-jodi");
+      localStorage.removeItem("mehndi");
+      localStorage.removeItem("namazi-jewellery");
+      localStorage.removeItem("namazi-spectacles");
+      localStorage.removeItem("bengals-hairband");
+      localStorage.removeItem("nazami-socks");
+      localStorage.removeItem("womenApparelProgress");
+      localStorage.removeItem("womenApparelNotApplicable");
+      localStorage.setItem("womenApparelProgress", 0);
+    localStorage.setItem("isItsSaved", false);
+    
+    localStorage.removeItem("plain-cloth");
+    localStorage.removeItem("starch-cloth");
+    localStorage.removeItem("cloth-button");
+    localStorage.removeItem("without-pockets");
+    localStorage.removeItem("bukhoor");
+    localStorage.removeItem("starch-topi");
+    localStorage.removeItem("namazi-topi");
+    localStorage.removeItem("namazi-spectacles-men");
+    localStorage.removeItem("nazami-taweez");
+    localStorage.removeItem("nazami-socks-men");
+    localStorage.removeItem("white-socks");
+    localStorage.removeItem("menApparelProgress");
+    localStorage.removeItem("menApparelNotApplicable");
+    localStorage.setItem("menApparelProgress", 0);
   }
 });
