@@ -88,3 +88,12 @@ let clearTasbeeh = $("#btn-clear-tasbeeh").on("click", function () {
     localStorage.removeItem("tasbeehProgress");
   }
 });
+let resetGender = $("#btn-reset-gender").on("click", function () {
+  if (resetGender) {
+    $(".clear-msg").css("display", "block");
+    $("#btn-reset-gender").attr("disabled", true);
+    localStorage.removeItem("gender");
+    localStorage.removeItem("showModal");
+    localStorage.setItem("showModal",true);
+  }
+});
