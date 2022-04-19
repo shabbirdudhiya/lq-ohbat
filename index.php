@@ -205,7 +205,7 @@ require_once '../requires_login.php';
         <br />
         <section class="bottom-navbar-section">
             <nav class="nav">
-                <a href="index.html" class="nav__link  nav__link--active">
+                <a href="index.php" class="nav__link  nav__link--active">
                     <img src="assets/svg/dashboard_black_24dp.svg" class="nav__icon  nav__link--active" alt=""
                         srcset="">
                     <span class="nav__text">Dashboard</span>
