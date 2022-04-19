@@ -32,7 +32,7 @@
 }
 
 .step.step-active .circle {
-  background-color: #4285f4;
+  background-color: red;
 }
 
 .step.step-completed .circle {
