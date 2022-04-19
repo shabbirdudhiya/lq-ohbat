@@ -8,7 +8,8 @@ function setItems() {
     localStorage.getItem("menApparelProgress") &&
     localStorage.getItem("womenApparelProgress") &&
     localStorage.getItem("quizProgress") &&
-    localStorage.getItem("kitProgress")
+    localStorage.getItem("kitProgress") &&
+    localStorage.getItem("showModal")
   ) {
     return;
   } else {
@@ -17,6 +18,7 @@ function setItems() {
     localStorage.setItem("quizProgress", 0);
     localStorage.setItem("kitProgress", 0);
     localStorage.setItem("isItsSaved", false);
+    localStorage.setItem("showModal", true);
   }
 }
 function getItems() {
@@ -42,43 +44,6 @@ function setValues() {
   percentageQuizProgressBar = parseInt((quizProgress / 100) * 100, 10);
   percentageKitProgressBar = parseInt((kitProgress / 100) * 100, 10);
 
-  // if (percentageMenApperalProgress == 0) {
-  //   menApperalProgressBar.text("Men");
-  //   // menApperalProgressBar.css("width", "100" + "%");
-  // } else {
-  //   menApperalProgressBar.text(percentageMenApperalProgress + "% -  Men");
-  //   menApperalProgressBar.css("width", percentageMenApperalProgress + "%");
-  // }
-
-  // if (percentageWomenApperalProgressBar == 0) {
-  //   womenApperalProgressBar.text("Women");
-  //   // womenApperalProgressBar.css("width", "100" + "%");
-  // } else {
-  //   womenApperalProgressBar.text(
-  //     percentageWomenApperalProgressBar + "% - Women"
-  //   );
-  //   womenApperalProgressBar.css(
-  //     "width",
-  //     percentageWomenApperalProgressBar + "%"
-  //   );
-  // }
-
-  // if (percentageQuizProgressBar == 0) {
-  //   quizProgressBar.text("Quiz");
-  //   // quizProgressBar.css("width", "100" + "%");
-  // } else {
-  //   quizProgressBar.text(percentageQuizProgressBar + "% - Quiz");
-  //   quizProgressBar.css("width", percentageQuizProgressBar + "%");
-  // }
-
-  // if (percentageKitProgressBar == 0) {
-  //   kitProgressBar.text("Kit");
-  //   // kitProgressBar.css("width", "10" + "%");
-  // } else {
-  //   kitProgressBar.text(percentageKitProgressBar + "% - Kit");
-  //   kitProgressBar.css("width", percentageKitProgressBar + "%");
-  // }
-
   // Set html
   menApperalProgressBar.text(percentageMenApperalProgress + "% -  Men");
   womenApperalProgressBar.text(percentageWomenApperalProgressBar + "% - Women");
@@ -102,6 +67,7 @@ function showJumbotorn() {
     $(".jumbotron-section").show();
   }
 }
+
 
 setItems();
 getItems();
