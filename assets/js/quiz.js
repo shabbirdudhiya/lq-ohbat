@@ -13,26 +13,47 @@ $(document).ready(function () {
             $('#' + checkboxId).attr("disabled", true);
             $('#' + checkboxId).attr("checked", true);
             localStorage.setItem(checkboxId, true);
-        } else {
-            
+            $('#'+checkboxId+'_true').css('color', 'green')
+    } else {
             $(this).prop('indeterminate', true);
             $('#' + checkboxId).attr("disabled", true);
-            if (checkboxId == 'opt1'|| checkboxId =='opt2'||checkboxId=='opt4') {   
-                $('.lable-q-1').css('color','red')
-                $('.lable-q-1').css('text-decoration','line-through')
-            }else if (checkboxId == 'opt6'||checkboxId=='opt7'||checkboxId=='opt8'){
-                $('.lable-q-2').css('color','red')
-                $('.lable-q-2').css('text-decoration','line-through')
+            
+            if (checkboxId == 'opt1' || checkboxId == 'opt2' || checkboxId == 'opt4') {   
+                $('.lable-q-1').css('color','red');
+                $('.lable-q-1').css('text-decoration', 'line-through');
+                // mark the correct checkbox
+                $('#opt3_true').css('color', 'green');      
+                $('#opt3').attr("checked", true);  
+                $('#opt3').attr("disabled", true);
+                localStorage.setItem('opt3', true);
+            }
+            else if (checkboxId == 'opt6' || checkboxId == 'opt7' || checkboxId == 'opt8') {
+                $('.lable-q-2').css('color', 'red');
+                $('.lable-q-2').css('text-decoration', 'line-through');
+                // mark the correct checkbox
+                $('#opt5_true').css('color', 'green');    
+                $('#opt5').attr("disabled", true);
+                $('#opt5').attr("checked", true);
+                localStorage.setItem('opt5', true);
             }
             else if (checkboxId == 'opt9'||checkboxId=='opt10'||checkboxId=='opt11'){
-                $('.lable-q-3').css('color','red')
-                $('.lable-q-3').css('text-decoration','line-through')
+                $('.lable-q-3').css('color','red');
+                $('.lable-q-3').css('text-decoration', 'line-through');
+                // mark the correct checkbox
+                $('#opt12_true').css('color', 'green');    
+                $('#opt12').attr("disabled", true);
+                $('#opt12').attr("checked", true);
+                localStorage.setItem('opt12', true);
             }
             else if (checkboxId == 'opt13'||checkboxId=='opt15'||checkboxId=='opt16'){
-                $('.lable-q-4').css('color','red')       
-                $('.lable-q-4').css('text-decoration','line-through')
+                $('.lable-q-4').css('color', 'red');
+                $('.lable-q-4').css('text-decoration', 'line-through');
+                // mark the correct checkbox
+                $('#opt14_true').css('color', 'green');
+                $('#opt14').attr("disabled", true);
+                $('#opt14').attr("checked", true);
+                localStorage.setItem('opt14', true);
             }
-
         }
         checkIfAllQuesAttemped();
     });
@@ -47,7 +68,6 @@ $(document).ready(function () {
         }
     }
     function disableoptions() {
-        
         if (localStorage.getItem('opt3')){
             $(option_3).prop('disabled', true);
             $(option_3).prop('checked', true);
