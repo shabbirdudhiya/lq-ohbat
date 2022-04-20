@@ -55,7 +55,7 @@ $(document).ready(function () {
             $('#' + element).attr("checked", true);
         });
         $('.quiz-completed').css('display', 'block');
-        $('#submit-quiz').attr("disabled", true);
+        // $('#submit-quiz').attr("disabled", true);
     }
     checkIfAllQuesAttemped();
 });
