@@ -13,13 +13,32 @@ $(document).ready(function () {
         checkboxId = $(this).attr('id');
         if (correctOptions.includes(checkboxId)) {
             selectedOptions.push(checkboxId);
+            
             $('#' + checkboxId).attr("disabled", true);
             $('#' + checkboxId).attr("checked", true);
-            localStorage.setItem(checkboxId, true);
 
+            localStorage.setItem(checkboxId, true);
         } else {
-            $(this).prop('indeterminate', true)
-            $('#' + checkboxId).attr("disabled", true)
+            
+            $(this).prop('indeterminate', true);
+            $('#' + checkboxId).attr("disabled", true);
+
+            if (checkboxId == 'opt1'|| checkboxId =='opt2'||checkboxId=='opt4') {   
+                $('.lable-q-1').css('color','red')
+                $('.lable-q-1').css('text-decoration','line-through')
+            }else if (checkboxId == 'opt6'||checkboxId=='opt7'||checkboxId=='opt8'){
+                $('.lable-q-2').css('color','red')
+                $('.lable-q-2').css('text-decoration','line-through')
+            }
+            else if (checkboxId == 'opt9'||checkboxId=='opt10'||checkboxId=='opt11'){
+                $('.lable-q-3').css('color','red')
+                $('.lable-q-3').css('text-decoration','line-through')
+            }
+            else if (checkboxId == 'opt13'||checkboxId=='opt15'||checkboxId=='opt16'){
+                $('.lable-q-4').css('color','red')       
+                $('.lable-q-4').css('text-decoration','line-through')
+            }
+
         }
         checkIfAllQuesAttemped();
     });
