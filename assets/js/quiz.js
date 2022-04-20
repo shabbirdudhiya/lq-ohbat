@@ -6,11 +6,10 @@ $(document).ready(function () {
     var option_14 = document.getElementById('opt14');
 
     var correctOptions = [option_3.id, option_5.id, option_12.id, option_14.id];
-    // var selectedOptions = [];
+
     $('input:checkbox').click(function () {
         checkboxId = $(this).attr('id');
         if (correctOptions.includes(checkboxId)) {
-            // selectedOptions.push(checkboxId);
             $('#' + checkboxId).attr("disabled", true);
             $('#' + checkboxId).attr("checked", true);
             localStorage.setItem(checkboxId, true);
@@ -47,6 +46,25 @@ $(document).ready(function () {
             showSuccess();
         }
     }
+    function disableoptions() {
+        
+        if (localStorage.getItem('opt3')){
+            $(option_3).prop('disabled', true);
+            $(option_3).prop('checked', true);
+        }
+        if (localStorage.getItem('opt5')){
+            $(option_5).prop('disabled', true);
+            $(option_5).prop('checked', true);
+        } 
+        if (localStorage.getItem('opt12')){
+            $(option_12).prop('disabled', true);
+            $(option_12).prop('checked', true);
+        }
+        if (localStorage.getItem('opt14')){
+            $(option_14).prop('disabled', true);
+            $(option_14).prop('checked', true);
+        }
+    }
 
     function showSuccess() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -58,4 +76,5 @@ $(document).ready(function () {
         // $('#submit-quiz').attr("disabled", true);
     }
     checkIfAllQuesAttemped();
+    disableoptions();
 });
