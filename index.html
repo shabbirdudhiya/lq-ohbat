@@ -135,12 +135,13 @@ require_once '../requires_login.php';
 
 
 
-        <section class="jumbotron-section" style="display: none;">
+        <!-- <section class="jumbotron-section" style="display: none;"> -->
+        <section class="jumbotron-section">
             <div class="container">
                 <div class="mt-4 p-5 bg-light border text-dark rounded">
                     <h1>Mubarak!</h1>
                     <p>
-                        Your name has been registered for araz in Hadrat Aaliyah.
+                        <b>Mulla Shabbir bhai Mulla Noman bhai Dudhiyawala</b>
                     </p>
                 </div>
             </div>
@@ -218,7 +219,12 @@ require_once '../requires_login.php';
                             <div>
                                 <div class="card-title"><a href="tasbeeh.html"> Tasbeeh </a></div>
                                 <div class="caption">
-                                    Finish Activity
+                                    <div class="progress my-1 mx-1" style="height: 20px;">
+                                        <div class="progress-bar bg-info" role="progressbar" id="tasbeeh-progress-bar"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <!-- Finish Activity -->
                                 </div>
                             </div>
                         </div>
@@ -290,8 +296,6 @@ require_once '../requires_login.php';
             if (localStorage.getItem('showModal') == 'true') {
                 document.getElementById('btn-modal').click()
                 document.getElementById('btn-modal').click()
-            } else {
-                console.log('Gender selected');
             }
         });
     </script>

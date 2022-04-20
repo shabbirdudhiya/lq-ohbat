@@ -276,7 +276,8 @@
             $("#sentence").css("background-color", "#c3ffc3");
             $('#solveAudio').trigger('play');
             $('#btnSolve').hide();
-            $('#btnNext').show();
+            // $('#btnNext').show();
+            // Set localStorage
             localStorage.setItem('tasbeehProgress', "completed");
         }
 
@@ -301,7 +302,7 @@
         }
 
         function showSolveBtn() {
-            $('#btnSolve').show();
+            // $('#btnSolve').show();
         }
 
         $('#sentence').bind('mouseup touchend', function () { // Check if sentence is solved

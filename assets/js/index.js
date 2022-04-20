@@ -34,28 +34,32 @@ function setValues() {
   let womenApperalProgressBar = $("#women-apperal-progress-bar");
   let quizProgressBar = $("#quiz-progress-bar");
   let kitProgressBar = $("#kit-progress-bar");
+  let tasbeehProgressBar = $("#tasbeeh-progress-bar");
 
   // Set Percentage
   percentageMenApperalProgress = parseInt((menApperalProgress / 100) * 100, 10);
-  percentageWomenApperalProgressBar = parseInt(
-    (womenApperalProgress / 100) * 100,
-    10
-  );
+  percentageWomenApperalProgressBar = parseInt((womenApperalProgress / 100) * 100,10);
   percentageQuizProgressBar = parseInt((quizProgress / 100) * 100, 10);
   percentageKitProgressBar = parseInt((kitProgress / 100) * 100, 10);
-
+  
   // Set html
   menApperalProgressBar.text(percentageMenApperalProgress + "% -  Mard");
   womenApperalProgressBar.text(percentageWomenApperalProgressBar + "% - Bairo");
   quizProgressBar.text(percentageQuizProgressBar + "% - Amal");
-    kitProgressBar.text(percentageKitProgressBar + "% - Jholnu");
+  kitProgressBar.text(percentageKitProgressBar + "% - Jholnu");
 
   // Set Progress bar
   menApperalProgressBar.css("width",percentageMenApperalProgress + "%");
   womenApperalProgressBar.css("width",percentageWomenApperalProgressBar + "%");
   quizProgressBar.css("width",percentageQuizProgressBar + "%");
   kitProgressBar.css("width", percentageKitProgressBar + "%");
+
+if (tasbeehProgress == "completed") { 
+  tasbeehProgressBar.text('100' + "% - Tasbeeh");
+  tasbeehProgressBar.css("width",'100' + "%");
 }
+}
+
 function showJumbotorn() {
   if (
     menApperalProgress == 100 &&

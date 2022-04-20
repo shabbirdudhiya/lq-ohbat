@@ -26,6 +26,7 @@ if (
   ) {
     $(".step4").removeClass("step-active");
     $(".step4").addClass("step-completed");
+    // show tasbeehProgressbar 
     $(".step5").addClass("step-completed");
   }
 }
